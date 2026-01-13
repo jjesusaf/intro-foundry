@@ -31,13 +31,13 @@ contract CounterTest is Test {
         counter.decrement();
         assertEq(counter.number(), 3);
     }
-/*
-    function test_DecrementUnderFlow() public {
-        vm.expectRevert(stdError.arithmeticError);
-        counter.decrement();
-        //assertEq(counter.number(), 1);
-    }
-*/
+    /*
+        function test_DecrementUnderFlow() public {
+            vm.expectRevert(stdError.arithmeticError);
+            counter.decrement();
+            //assertEq(counter.number(), 1);
+        }
+    */
 
     function testFuzz_SetNumber(uint256 x) public {
         counter.setNumber(x);
